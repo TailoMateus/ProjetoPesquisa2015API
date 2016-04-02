@@ -1,0 +1,5 @@
+== README
+
+Projeto de pesquisa de 2015 com o assunto: PROJETO E PROTÓTIPO DE FERRAMENTA DE GERENCIAMENTO DE PROJETOS ADAPTADA AO PROCESSO DE CRIAÇÃO.
+
+Utilizando em forma de API, possuindo Ruby on Rails no server e AngularJS no client.
