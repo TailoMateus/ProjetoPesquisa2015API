@@ -1,0 +1,42 @@
+.corSubTitulo{
+	color:#a39d95;
+}
+
+.alinhandoIcones{
+	float:left; 
+	margin-right: 4%;
+	color:#3a6f45;
+	border-radius: 50%;
+	padding-right: 6px;
+}
+
+.coresIconesMais{
+	border: 7px solid #7ef297;
+	background-color: #7ef297;
+}
+
+.coresIconesMenos{
+	border: 7px solid #f24472;
+	background-color: #f24472;
+}
+
+.botaoSalvar{
+  float:right;
+  margin-right:18%;
+  margin-top:0.5%;
+  background-color: #f24472;
+  border: 1px solid #f24472;
+  color: #ffffff;
+}
+
+.botaoSalvar:hover{
+  background-color: #f24472;
+  border: 1px solid #f24472;
+  color: #ffffff;
+}
+
+.botaoSalvar:focus{
+  background-color: #f24472;
+  border: 1px solid #f24472;
+  color: #ffffff;
+}

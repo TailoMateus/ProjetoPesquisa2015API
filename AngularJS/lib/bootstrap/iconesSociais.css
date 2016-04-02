@@ -1,0 +1,205 @@
+
+.btn-linkedin {
+  color: #ffffff;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.btn-linkedin:hover,
+.btn-linkedin:focus,
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open .dropdown-toggle.btn-linkedin {
+  color: #ffffff;
+  background-color: #53a8d3;
+  border-color: #33708e;
+}
+
+.btn-linkedin:active,
+.btn-linkedin.active,
+.open .dropdown-toggle.btn-linkedin {
+  background-image: none;
+}
+
+.btn-linkedin.disabled,
+.btn-linkedin[disabled],
+fieldset[disabled] .btn-linkedin,
+.btn-linkedin.disabled:hover,
+.btn-linkedin[disabled]:hover,
+fieldset[disabled] .btn-linkedin:hover,
+.btn-linkedin.disabled:focus,
+.btn-linkedin[disabled]:focus,
+fieldset[disabled] .btn-linkedin:focus,
+.btn-linkedin.disabled:active,
+.btn-linkedin[disabled]:active,
+fieldset[disabled] .btn-linkedin:active,
+.btn-linkedin.disabled.active,
+.btn-linkedin[disabled].active,
+fieldset[disabled] .btn-linkedin.active {
+  background-color: #73b8db;
+  border-color: #4393bb;
+}
+
+.btn-facebook {
+  color: #ffffff;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #ffffff;
+  background-color: #5583a7;
+  border-color: #2d526f;
+}
+
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #6f97b6;
+  border-color: #3f729b;
+}
+
+.btn-instagram {
+  color: #ffffff;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus,
+.btn-instagram:active,
+.btn-instagram.active,
+.open .dropdown-toggle.btn-instagram {
+  color: #ffffff;
+  background-color: #5583a7;
+  border-color: #2d526f;
+}
+
+.btn-instagram:active,
+.btn-instagram.active,
+.open .dropdown-toggle.btn-instagram {
+  background-image: none;
+}
+
+.btn-instagram.disabled,
+.btn-instagram[disabled],
+fieldset[disabled] .btn-instagram,
+.btn-instagram.disabled:hover,
+.btn-instagram[disabled]:hover,
+fieldset[disabled] .btn-instagram:hover,
+.btn-instagram.disabled:focus,
+.btn-instagram[disabled]:focus,
+fieldset[disabled] .btn-instagram:focus,
+.btn-instagram.disabled:active,
+.btn-instagram[disabled]:active,
+fieldset[disabled] .btn-instagram:active,
+.btn-instagram.disabled.active,
+.btn-instagram[disabled].active,
+fieldset[disabled] .btn-instagram.active {
+  background-color: #6f97b6;
+  border-color: #3f729b;
+}
+
+.btn-skype {
+  color: #ffffff;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.btn-skype:hover,
+.btn-skype:focus,
+.btn-skype:active,
+.btn-skype.active,
+.open .dropdown-toggle.btn-skype {
+  color: #ffffff;
+  background-color: #4eb5db;
+  border-color: #0082b3;
+}
+
+.btn-skype:active,
+.btn-skype.active,
+.open .dropdown-toggle.btn-skype {
+  background-image: none;
+}
+
+.btn-skype.disabled,
+.btn-skype[disabled],
+fieldset[disabled] .btn-skype,
+.btn-skype.disabled:hover,
+.btn-skype[disabled]:hover,
+fieldset[disabled] .btn-skype:hover,
+.btn-skype.disabled:focus,
+.btn-skype[disabled]:focus,
+fieldset[disabled] .btn-skype:focus,
+.btn-skype.disabled:active,
+.btn-skype[disabled]:active,
+fieldset[disabled] .btn-skype:active,
+.btn-skype.disabled.active,
+.btn-skype[disabled].active,
+fieldset[disabled] .btn-skype.active {
+  background-color: #70c3e2;
+  border-color: #00aff0;
+}
+
+.btn-youtube {
+  color: #ffffff;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open .dropdown-toggle.btn-youtube {
+  color: #ffffff;
+  background-color: #ac2b26;
+  border-color: #340308;
+}
+
+.btn-youtube:active,
+.btn-youtube.active,
+.open .dropdown-toggle.btn-youtube {
+  background-image: none;
+}
+
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active {
+  background-color: #cd332d;
+  border-color: #6e0610;
+}

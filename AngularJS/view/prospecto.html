@@ -1,0 +1,139 @@
+<div ng-controller="prospectoCtrl">
+<h3 class="dataTitulo corTitulo">{{ dataAtual }}</h3>
+
+<h3>{{usuarios.usuario[0].nome}}</h3>
+<h5 class="espacamentoTitulo">{{usuarios.usuario[0].funcao}}</h5>
+
+<h2 class="corTitulo espacamentoTitulo">PROSPECTO</h2>
+
+<p ng-click="esconderCadastroBasico = true" ng-show="!esconderCadastroBasico" class="corSubTitulo">CADASTRO BÁSICO <span ng-click="esconderCadastroBasico = true" ng-show="!esconderCadastroBasico" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+<p ng-click="esconderCadastroBasico = false" ng-show="esconderCadastroBasico" class="corSubTitulo">CADASTRO BÁSICO <span ng-click="esconderCadastroBasico = false" ng-show="esconderCadastroBasico" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+<div ng-hide="esconderCadastroBasico">
+	<div class="alert alert-success" role="alert" ng-repeat="alert in alerts" type="{{alert.type}}" ng-click="closeAlert($index)">
+  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" ng-click"closeAlert($index)">&times;</span></button>
+   			
+   	{{alert.msg}}
+	</div>
+
+  <form class="form-horizontal" name="prospectoForm">
+	<div class="container">
+	  <div class="control-group">
+		<div class="controls">
+		  <div class="col-xs-10">
+			<input ng-model="prospecto.nome" class="form-control" type="text" placeholder="Nome"></input>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="control-group">
+		<div class="controls">
+		  <div class="col-xs-10">
+			<input ng-model="prospecto.empresa" class="form-control" type="text" placeholder="Empresa"></input>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="control-group">
+		<div class="controls">
+		  <div class="col-xs-10">
+			<input ng-model="prospecto.email" class="form-control" type="text" placeholder="Email"></input>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="control-group">
+		<div class="controls">
+		  <div class="col-xs-10">
+			<input ng-model="prospecto.telefone" ui-mask="{{maskTelefone}}" class="form-control" type="tel" placeholder="Telefone"></input>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="control-group">
+		<div class="controls">
+		  <div class="col-xs-6 separadorCidadeEstado">
+			<input ng-model="prospecto.cidade" class="form-control" type="text" placeholder="Cidade"></input>
+		  </div>
+		  <div class="col-xs-4 separadorEstadoCidade">
+		    <select ng-model="prospecto.estado_id" class="form-control">
+		      <option value="">UF</option>
+		      <option ng-repeat="estado in estados" value="{{estado.id}}">{{estado.UF}}</option>
+		    </select>
+		  </div>
+		</div>
+	  </div>
+	  <div class="espacamentoComoChegou">
+	  
+	  <p class="corSubTitulo">COMO CHEGOU ATÉ A NEO/SAGA?</p>
+
+	  <a ng-click="selecionarIconesSocialFacebook = true" ng-show="!selecionarIconesSocialFacebook" class="corFacebookInstagram btn btn-social-icon btn-facebook espacamentoPequenoIconesSociais">
+		<i class="fa fa-facebook"></i>
+		<p class="alinharDescricaoIconesSociais">Facebook</p>
+	  </a> 
+	  <a ng-click="selecionarIconesSocialFacebook = false" ng-show="selecionarIconesSocialFacebook" class="btn btn-social-icon btn-facebook espacamentoPequenoIconesSociais">
+		<i class="fa fa-facebook"></i>
+		<p class="alinharDescricaoIconesSociais">Facebook</p>
+	  </a>
+		
+	  <a ng-click="selecionarIconesSocialInstagram = true" ng-show="!selecionarIconesSocialInstagram" class="corFacebookInstagram btn btn-social-icon btn-instagram espacamentoPequenoIconesSociais">
+		<i class="fa fa-instagram"></i>
+		<p class="alinharDescricaoIconesSociais">Instagram</p>
+	  </a> 
+	  <a ng-click="selecionarIconesSocialInstagram = false" ng-show="selecionarIconesSocialInstagram" class="btn btn-social-icon btn-instagram espacamentoPequenoIconesSociais">
+		<i class="fa fa-instagram"></i>
+		<p class="alinharDescricaoIconesSociais">Instagram</p>
+	  </a>
+
+	  <a ng-click="selecionarIconesSocialSkype = true" ng-show="!selecionarIconesSocialSkype" class="corSkypeLinkedin btn btn-social-icon btn-skype espacamentoGrandeIconesSociais">
+		<i class="fa fa-skype"></i>
+		<p class="alinharDescricaoIconesSociais">Skype</p>
+	  </a> 
+	  <a ng-click="selecionarIconesSocialSkype = false" ng-show="selecionarIconesSocialSkype" class="btn btn-social-icon btn-skype espacamentoGrandeIconesSociais">
+		<i class="fa fa-skype"></i>
+		<p class="alinharDescricaoIconesSociais">Skype</p>
+	  </a> 
+
+	  <a ng-click="selecionarIconesSocialYoutube = true" ng-show="!selecionarIconesSocialYoutube" class="corYoutube btn btn-social-icon btn-youtube espacamentoMedioIconesSociais">
+		<i class="fa fa-youtube"></i>
+		<p class="alinharDescricaoIconesSociais">Youtube</p>
+	  </a> 
+	  <a ng-click="selecionarIconesSocialYoutube = false" ng-show="selecionarIconesSocialYoutube" class="btn btn-social-icon btn-youtube espacamentoMedioIconesSociais">
+		<i class="fa fa-youtube"></i>
+		<p class="alinharDescricaoIconesSociais">Youtube</p>
+	  </a> 
+
+	  <a ng-click="selecionarIconesSocialLinkedin = true" ng-show="!selecionarIconesSocialLinkedin" class="corSkypeLinkedin btn btn-social-icon btn-linkedin espacamentoMedioIconesSociais">
+		<i class="fa fa-linkedin"></i>
+		<p class="alinharDescricaoIconesSociais"> Linkedin</p>
+	  </a> 
+	  <a ng-click="selecionarIconesSocialLinkedin = false" ng-show="selecionarIconesSocialLinkedin" class="btn btn-social-icon btn-linkedin espacamentoMedioIconesSociais">
+		<i class="fa fa-linkedin"></i>
+		<p class="alinharDescricaoIconesSociais"> Linkedin</p>
+	  </a> 
+	
+	  <button class="btn botaoSalvar" ng-disabled="prospectoForm.$invalid" ng-click="saveProspecto()">Salvar</button >
+
+	  <span class="ng-scope" ng-if="!selecionarIconesSocialInstagram">
+		<input type="text" hidden="hidden" ng-model="prospecto.social" value="Instagram">
+	  </span>
+	  <span class="ng-scope" ng-if="!selecionarIconesSocialFacebook">
+		<input type="text" hidden="hidden" ng-model="prospecto.social" value="Facebook">
+	  </span>
+	  
+	  <span class="ng-scope" ng-if="!selecionarIconesSocialSkype">
+		<input type="text" hidden="hidden" ng-model="prospecto.social" value="Skype">
+	  </span>
+	  
+	  <span class="ng-scope" ng-if="!selecionarIconesSocialYoutube">
+		<input type="text" hidden="hidden" ng-model="prospecto.social" value="Youtube">
+	  </span>
+	  <span class="ng-scope" ng-if="!selecionarIconesSocialLinkedin">
+		<input type="text" hidden="hidden" ng-model="prospecto.social" value="Linkedin">
+	  </span>
+	  </div>
+	  <hr>
+	</div>
+  </form>
+</div>	
+</div>

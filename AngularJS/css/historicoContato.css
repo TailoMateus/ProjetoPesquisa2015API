@@ -1,0 +1,47 @@
+.espacamentoTopo{
+	margin-top: 2%;
+}
+
+.espacamaentoBaixo{
+	margin-bottom: 20%;
+}
+
+.espacamentoTabelaHistorico{
+	margin-left: 1.8%; 
+	margin-top: 4%;
+}
+
+.espacamentoCadastroCompleto{
+	padding-bottom: 4%;
+}
+
+@media(max-width: 890px){
+	.btn.botaoSalvar{
+		margin-top: 4px;
+	}
+	
+	.espacamentoCadastroCompleto{
+		padding-bottom: 16%;
+	}
+	
+	.espacamaentoBaixo{
+		margin-bottom: 30%;
+	}
+}
+
+@media(max-width: 550px){
+	.espacamaentoBaixo{
+		margin-bottom: 50%;
+	}
+}
+
+@media(max-width: 420px){
+	.espacamaentoBaixo{
+		margin-bottom: 60%;
+	}
+	
+	.col-xs-4 .form-control.inputHistorico{
+		left: 0%;
+		display: block;
+	}
+}

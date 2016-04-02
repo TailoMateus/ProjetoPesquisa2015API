@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projeto - Prospectos</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.css">
+  <!-- <link rel="stylesheet" href="../lib/bootstrap/font-awesome/css/font-awesome.min.css"> --> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/iconesSociais.css">
+  <link rel="stylesheet" type="text/css" href="../css/prospectoPrincipal.css">
+  <link rel="stylesheet" type="text/css" href="../css/prospecto.css">
+  <link rel="stylesheet" type="text/css" href="../css/historicoContato.css">
+  <link rel="stylesheet" type="text/css" href="../css/cadastroCompleto.css">
+  <link rel="stylesheet" type="text/css" href="../css/select.min.css">
+  
+</head>
+<body>	
+  <div class="container" ng-app="app">
+    <div ng-controller="prospectoCtrl">
+      <div ng-include="'prospecto.html'"></div>
+      <div ng-include="'historicoContato.html'"></div>
+      <div ng-include="'cadastroCompleto.html'"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../lib/angular/angular-locale_pt-br.js"></script>
+  <script src="../lib/angular/ui-utils.min.js"></script>
+  <script src="../lib/angular/select.min.js"></script>  
+  <script src="../lib/ui-bootstrap-tpls-0.13.4.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/services/prospectoService.js"></script>
+  <script src="../js/services/historicoContatoService.js"></script>
+  <script src="../js/services/cadastroCompletoService.js"></script>
+  <script src="../js/services/estadoService.js"></script>
+  <script src="../js/controllers/prospectoCtrl.js"></script>
+  <script src="../js/controllers/historicoContatoCtrl.js"></script>
+  <script src="../js/controllers/cadastroCompletoCtrl.js"></script>
+
+</body>
+</html>

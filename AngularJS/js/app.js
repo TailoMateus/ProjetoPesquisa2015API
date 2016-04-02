@@ -1,0 +1,1 @@
+var app = angular.module('app', ['ui.bootstrap', 'ui.mask', 'ui.select']);

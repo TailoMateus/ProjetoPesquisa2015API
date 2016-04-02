@@ -1,0 +1,128 @@
+.header{
+	top: 0;
+	height: 10%;
+	background-color: #1f3688;
+	margin-bottom: 1%;
+}
+
+.imgMarca{
+	height: 70%;
+	margin-right: 35%;
+	margin-left: 5%;
+	margin-bottom: 0.5%
+}
+
+.imgIcones{
+	height: 40%;
+	margin-bottom: 2%;
+	margin-top: 1.5%;
+}
+
+.blocoUsuario{
+	width:180px; 
+	float:right;
+	margin-right:10%;
+	margin-top:1.5%;	
+}
+
+.imgUsuario{
+	height: 55%;
+	margin-right: 10%;
+	float: right;
+	margin-top: -20%;
+}
+
+.informacaoNomeUsuario{
+	color: #ffffff;
+	margin-left: 20%;
+	font-size: 12px;
+}
+
+.informacaoFuncaoUsuario{
+	color: #ffffff;
+	margin-top: 4%;
+	margin-left: 50%;
+	font-size: 12px;
+}
+
+.divisorHeader{
+	height: 0.5%;
+	background-color: #75cb67;
+	margin-bottom: 3%;
+}
+
+.estiloTabela{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.estiloTabela table{
+	font-size: 13px;
+	
+}
+
+.numeroPaginacao{
+	float:right;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 4px;
+}
+
+.corTextoPaginacao{
+	color: #3eba1a;
+}
+
+.corTextoPaginacao:hover{
+	color: #3eba1a;
+}
+
+.corTextoPaginacao:focus{
+	color: #3eba1a;
+}
+
+@media(max-width: 1500px){
+	.alinharCalendario{
+		float: left;
+	}
+
+	.titulo{
+		color: #75cb67;
+		font-size: 18px;
+		margin-bottom: 0.7%;
+		margin-left: 3%;
+	}
+
+	.subTitulo{
+		color: #0c2980;
+	}
+}
+
+@media(max-width: 900px){
+	.alinharCalendario{
+		float: left;
+		margin-left: 6%;
+	}
+
+	.titulo{
+		color: #75cb67;
+		font-size: 18px;
+	}
+
+	.subTitulo{
+		color: #0c2980;	
+	}
+
+	.imgMarca{
+		height: 70%;
+		margin-right: 0%;
+		margin-left: 5%;
+		margin-bottom: 0.5%
+	}
+
+	.blocoUsuario{
+		width:180px; 
+		float:right;
+		margin-right:0%;
+		margin-top:1.5%;	
+	}
+}

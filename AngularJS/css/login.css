@@ -1,0 +1,23 @@
+#centralizarLogin{
+	width: 50%;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	margin-top: 18%;
+}
+
+.corPrincipal{
+	background-color:#f24472;
+}
+
+.componentesLogin{
+	border-color: #74ff9a;
+	margin-top: 2%;
+	color: #74ff9a;
+	background-color: #f24472;
+	text-align: center;
+}
+
+.componentesLogin:focus{
+	border-color: #74ff9a;
+}

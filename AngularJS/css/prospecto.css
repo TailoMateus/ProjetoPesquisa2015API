@@ -1,0 +1,98 @@
+.dataTitulo{
+  margin-top: 3%;
+}
+
+.corTitulo{
+  color:#f24472;
+}
+
+.espacamentoTitulo{
+  margin-bottom: 3%;   
+}
+
+.glyphicon{
+  font-size: 70%;
+}
+
+#separadorCidadeEstado{
+  padding-right: 5px;
+}
+
+#separadorEstadoCidade{
+  padding-left: 5px;
+}
+
+.espacamentoPequenoIconesSociais{
+  margin-top:10px;
+  padding:4px 6px;
+}
+
+.espacamentoMedioIconesSociais{
+  margin-top:10px;
+  padding:4px 11px;
+}
+
+.espacamentoGrandeIconesSociais{
+  margin-top:10px;
+  padding:4px 18px;
+}
+
+.alinharDescricaoIconesSociais{
+  margin:0px 0px 2px;
+}
+
+.corFacebookInstagram{
+  background-color: #133783;
+}
+
+.corSkypeLinkedin{
+  background-color: #1791E3;
+}
+
+.corYoutube{
+  background-color: #751015;
+}
+
+hr{
+  margin-right: 18%;
+  border: 1px solid #CCC;
+  margin-top: 3%;
+}
+
+.margemNovoHistorico{
+  margin-left: 2%;
+}
+
+@media(max-width: 1900px){
+  .espacamentoComoChegou{
+    margin-top:22%;
+  }
+}
+
+@media(max-width: 890px){
+  .espacamentoComoChegou{
+    margin-top:36%;
+  }
+}
+
+@media(max-width: 550px){
+  .espacamentoComoChegou{
+    margin-top:56%;
+  }
+
+  .form-control{
+    width: 125%;
+  }
+
+  .col-xs-4.separadorEstadoCidade .form-control{
+    position: relative;
+    left: 40%;
+
+  }
+}
+
+@media(max-width: 420px){
+  .espacamentoComoChegou{
+    margin-top:78%;
+  }
+}

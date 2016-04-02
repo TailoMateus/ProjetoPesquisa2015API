@@ -1,0 +1,19 @@
+== README
+
+* Versão Ruby
+
+* Dependências
+
+* Configuração
+
+* Criação da Base de Dados
+
+$ sudo -u postgres_user psql postgres_password
+postgres=# create database projeto_development;
+postgres=# create database projeto_test;
+postgres=# create database projeto_production;
+postgres=# \q
+
+* Inicialização da Base de Dados
+
+* Configuração de Implantação

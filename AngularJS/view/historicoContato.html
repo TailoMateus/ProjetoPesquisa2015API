@@ -1,0 +1,103 @@
+<div ng-controller="historicoContatoCtrl">
+  <p class="corSubTitulo" ng-click="esconderHistoricoContato = true" ng-show="!esconderHistoricoContato">HISTÓRICO DE CONTATOS <span ng-click="esconderHistoricoContato = true" ng-show="!esconderHistoricoContato" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+  <p class="corSubTitulo" ng-click="esconderHistoricoContato = false; carregarProspectos(); carregarHistorico();" ng-show="esconderHistoricoContato">HISTÓRICO DE CONTATOS <span size:"10px" ng-click="esconderHistoricoContato = false; carregarProspectos(); carregarHistorico();" ng-show="esconderHistoricoContato" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+  <div ng-hide="esconderHistoricoContato">
+  		<div class="alert alert-success" role="alert" ng-repeat="alert in alerts" type="{{alert.type}}" ng-click="closeAlert($index)">
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" ng-click"closeAlert($index)">&times;</span></button>
+   			
+   			{{alert.msg}}
+			</div>
+
+      <div class="col-xs-8 espacamentoTopo">          
+        <ui-select ng-click="carregarHistorico()" ng-model="prospectoselecionado.selected" theme="bootstrap" reset-search-input="false">
+                
+          <ui-select-match placeholder="Digite o nome">
+            {{prospectoselecionado.selected.nome}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{prospectoselecionado.selected.nomesituacao}}
+          </ui-select-match>
+                
+          <ui-select-choices repeat="prospecto in prospectos | filter : $select.search">
+            {{ prospecto.nome}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{prospecto.nomesituacao}}
+          </ui-select-choices>
+            
+        </ui-select>                   
+      </div>
+
+    <div class="row">
+      <div class="col-xs-10 espacamentoTabelaHistorico">
+    		<table class="table table-striped" ng-repeat="historicoProspecto in historicoProspectos">
+			    <tbody>
+			      <tr>
+			        <td>{{ historicoProspecto.data | date:'dd/MM' }}</td>
+			        <td>{{ historicoProspecto.nome }} </td>
+			        <td>
+
+			        	<span ng-click="esconderDescricaoHistoricoContato = true" ng-show="!esconderDescricaoHistoricoContato" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span>
+			      					
+			      		<span ng-click="esconderDescricaoHistoricoContato = false" ng-show="esconderDescricaoHistoricoContato" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></td>
+			      </tr>
+			      
+			      <tr ng-hide="esconderDescricaoHistoricoContato">
+			      	<td>
+			         	{{ historicoProspecto.descricao }}
+					    </td>			
+					  </tr>  		
+			    </tbody>
+			  </table>
+  		</div>
+  	</div>
+
+		<form class="form-horizontal" name="historicoForm">
+	  	<p class="corSubTitulo margemNovoHistorico" ng-click="esconderComponentesHistoricoContato = true" ng-show="!esconderComponentesHistoricoContato">Novo histórico <span ng-click="esconderComponentesHistoricoContato = true" ng-show="!esconderComponentesHistoricoContato" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+      
+      <p class="corSubTitulo margemNovoHistorico" ng-click="esconderComponentesHistoricoContato = false" ng-show="esconderComponentesHistoricoContato">Novo histórico<span ng-click="esconderComponentesHistoricoContato = false" ng-show="esconderComponentesHistoricoContato" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span> </p>
+	  
+      <input type="hidden" ng-model="prospectoselecionado.situacao_id">   
+
+		  <div ng-hide="esconderComponentesHistoricoContato" class="espacamaentoBaixo">
+				<div class="control-group">
+			  	<div class="controls">
+			    	<div class="col-xs-10">
+				  		<textarea ng-model="historicoProspecto.descricao" class="form-control" rows="5" cols="50"
+				  		placeholder="Descrição do contato: (O que aconteceu? Como foi? Quem atendeu?)"></textarea>
+						</div>
+			  	</div>
+				</div>
+
+				<div class="control-group">
+			  	<div class="controls">
+			    	<div class="col-xs-12">
+			      	<div style="position:relative;">
+								<a class='btn btn-primary' href='javascript:;'>
+									Anexo
+									<input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+								</a>
+								&nbsp;
+								<span class='label label-info' id="upload-file-info"></span>
+							</div>
+			    	</div>
+			  	</div>
+				</div>
+
+				<div class="control-group">
+			  	<div class="controls">
+			    	<div class="col-xs-4">
+			      	<select ng-model="historicoProspecto.situacao_id" class="form-control espacamentoTopo inputHistorico">
+			        	<option value="">Status</option>
+	              <option ng-repeat="situacao in situacaos" value="{{situacao.id}}">{{situacao.nome}}</option>
+		          </select>
+			    	</div>
+
+			    	<div class="col-xs-4">
+			      	<input ng-model="historicoProspecto.data" type="date" class="form-control espacamentoTopo inputHistorico">
+			    	</div>
+			  	</div>
+				</div>
+			
+				<button ng-disabled="historicoForm.$invalid" class="btn botaoSalvar" ng-click="saveHistoricoProspecto(); editProspecto(prospectoselecionado);">Salvar</button>
+		  <div class="espacamentoCadastroCompleto"></div>
+		  </div>
+		</form>
+		
+  </div>
+</div>

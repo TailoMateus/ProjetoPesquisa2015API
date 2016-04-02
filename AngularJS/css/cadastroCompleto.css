@@ -1,0 +1,29 @@
+.espacamentoBotaoSalvar{
+	margin-bottom: 3%;
+}
+
+@media(max-width: 890px){
+}
+
+@media(max-width: 550px){
+	.col-xs-5{
+		width: 44.5%;
+		margin-right: 20px;
+	}
+
+	.col-xs-4 .form-control{
+		position: relative;
+		left: 48%;
+	}
+
+	.espacamentoBotaoSalvar{
+		position: relative;
+		left: 14%;
+	}
+}
+
+@media(max-width: 420px){
+	.col-xs-5{
+		width: 83%;
+	}
+}

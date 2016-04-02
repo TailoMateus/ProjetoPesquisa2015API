@@ -1,0 +1,95 @@
+<div ng-controller="cadastroCompletoCtrl">
+  <p class="corSubTitulo espacamentoCadastroCompleto" ng-click="esconderCadastroCompleto = true" ng-show="!esconderCadastroCompleto">CADASTRO COMPLETO <span ng-click="esconderCadastroCompleto = true" ng-show="!esconderCadastroCompleto" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+  <p class="corSubTitulo espacamentoCadastroCompleto" ng-click="esconderCadastroCompleto = false; carregarProspectos();" ng-show="esconderCadastroCompleto">CADASTRO COMPLETO <span ng-click="esconderCadastroCompleto = false;  carregarProspectos();" ng-show="esconderCadastroCompleto" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+  
+  <div ng-hide="esconderCadastroCompleto">
+  	<div class="alert alert-success" role="alert" ng-repeat="alert in alerts" type="{{alert.type}}" ng-click="closeAlert($index)">
+  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" ng-click"closeAlert($index)">&times;</span></button>
+   			
+   		{{alert.msg}}
+		</div>
+
+		<form class="form-horizontal" name="cadastroCompletoForm">
+			<div class="container">
+				<div class="control-group">
+					<div class="controls">
+						<div class="col-xs-10">
+							<input ng-model="cadastroCompleto.nomefantasia" class="form-control" type="text"  placeholder="Nome Fantasia"></input>
+						</div>
+					</div>
+				</div>
+	  
+			  <div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-10">
+							<input ng-model="cadastroCompleto.razaosocial" class="form-control" type="text" placeholder="Razão Social"></input>
+					  </div>
+					</div>
+			  </div>
+
+			  <div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.cnpj" class="form-control" type="text" placeholder="CNPJ"></input>
+					  </div>
+
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.ie" class="form-control" type="text" placeholder="I.E"></input>
+					  </div>
+					</div>
+			  </div>
+			
+				<div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-6">
+							<input ng-model="cadastroCompleto.municipio" class="form-control" type="text" placeholder="Munícipio"></input>
+						</div>
+						<div class="col-xs-4">
+							<select ng-model="cadastroCompleto.estado_id" class="form-control">
+								<option value="">UF</option>
+		      			<option ng-repeat="estado in estados" value="{{estado.id}}">{{estado.UF}}</option>
+							</select>
+						</div>
+					</div>
+			  </div>	
+
+			  <div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-10">
+							<input ng-model="cadastroCompleto.rua" class="form-control" type="text" placeholder="Rua"></input>
+					  </div>
+					</div>
+			  </div>
+
+			  <div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.bairro" class="form-control" type="text" placeholder="Bairro"></input>
+					  </div>
+
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.complemento" class="form-control" type="text" placeholder="Complemento"></input>
+					  </div>
+					</div>
+			  </div>
+
+			  <div class="control-group">
+					<div class="controls">
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.cep" class="form-control" type="text" placeholder="CEP"></input>
+					  </div>
+
+					  <div class="col-xs-5">
+							<input ng-model="cadastroCompleto.telefone" class="form-control" type="text" placeholder="Telefone"></input>
+					  </div>
+					</div>
+			  </div>
+
+			  <input type="hidden" ng-model="cadastroCompleto.prospecto_id">    
+
+			</div>
+
+			<button ng-disabled="cadastroCompletoForm.$invalid" class="btn botaoSalvar espacamentoBotaoSalvar" ng-click="saveCadastroCompleto()">Salvar</button>
+		</form>
+  </div>
+<div>
